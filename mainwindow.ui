@@ -43,7 +43,7 @@
        <string notr="true">background:black;</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -211,8 +211,8 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_3">
         <property name="geometry">
          <rect>
-          <x>604</x>
-          <y>180</y>
+          <x>600</x>
+          <y>150</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -228,8 +228,8 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_4">
         <property name="geometry">
          <rect>
-          <x>724</x>
-          <y>180</y>
+          <x>720</x>
+          <y>150</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -246,7 +246,7 @@ background:red;</string>
         <property name="geometry">
          <rect>
           <x>840</x>
-          <y>300</y>
+          <y>280</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -262,8 +262,8 @@ background:red;</string>
        <widget class="QLabel" name="label_5">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>120</y>
+          <x>580</x>
+          <y>100</y>
           <width>351</width>
           <height>20</height>
          </rect>
@@ -278,8 +278,8 @@ background:red;</string>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>250</y>
+          <x>580</x>
+          <y>230</y>
           <width>351</width>
           <height>20</height>
          </rect>
@@ -294,8 +294,8 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_6">
         <property name="geometry">
          <rect>
-          <x>600</x>
-          <y>300</y>
+          <x>580</x>
+          <y>280</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -311,8 +311,8 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_7">
         <property name="geometry">
          <rect>
-          <x>720</x>
-          <y>300</y>
+          <x>710</x>
+          <y>280</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -329,7 +329,7 @@ background:red;</string>
         <property name="geometry">
          <rect>
           <x>840</x>
-          <y>182</y>
+          <y>150</y>
           <width>101</width>
           <height>31</height>
          </rect>
