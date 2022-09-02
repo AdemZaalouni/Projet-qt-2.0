@@ -33,8 +33,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
   ui->tabclient->setModel(C.afficher());
    ui->tabevent->setModel(E.afficher());
-   E.notifcation();
-
 
    // stat event
 
@@ -43,21 +41,18 @@ MainWindow::MainWindow(QWidget *parent)
        ui->ent_progressBar->setValue(0);
        ui->ent_progressBar_2->setValue(0);
        ui->ent_progressBar_3->setValue(0);
-       int SA=0,SO=0,ST=0;
+       int SA=0,SO=0;
         int a =E.statistique_genre("musique");
        int o=E.statistique_genre("historique");
-         int s=E.statistique_genre("Soiree");
-        int t=E.statistique_event();
+        int t=E.statistique_genre("soiree");
         SA=(a*100)/t;
         SO=(o*100)/t;
-        ST=(s*100)/t;
+        ST=(o*100)/t;
 
 
     ui->ent_progressBar->setValue(SA);
      ui->ent_progressBar_2->setValue(SO);
-    ui->ent_progressBar_3->setValue(ST);
-
-
+     ui->ent_progressBar_3->setValue(ST);
 
 
 
@@ -173,7 +168,6 @@ void MainWindow::on_pushButton_23_clicked()
 //ajouet button
 void MainWindow::on_pushButton_13_clicked()
 {
-
     int p=ui->prix->text().toInt();
     QString nom=ui->nom_e->text();
     QString genre=ui->genre->text();
@@ -268,23 +262,8 @@ void MainWindow::on_pushButton_14_clicked()
 //button refresh
 void MainWindow::on_pushButton_24_clicked()
 {
-      E.notifcation();
 
      ui->tabevent->setModel(E.afficher());
-
-     int SA=0,SO=0,ST=0;
-      int a =E.statistique_genre("musique");
-     int o=E.statistique_genre("historique");
-       int s=E.statistique_genre("Soiree");
-      int t=E.statistique_event();
-      SA=(a*100)/t;
-      SO=(o*100)/t;
-      ST=(s*100)/t;
-
-
-  ui->ent_progressBar->setValue(SA);
-   ui->ent_progressBar_2->setValue(SO);
-  ui->ent_progressBar_3->setValue(ST);
 }
 
 //PDF

@@ -42,6 +42,10 @@ private:
            QSqlQueryModel* tri_nom();
              QSqlQueryModel* tri_tel();
              QSqlQueryModel* tri_prenom();
+
+             int statistique_genre(QString);
+            int statistique_event();
+            void notifcation();
             bool supprimer(int);
 };
 

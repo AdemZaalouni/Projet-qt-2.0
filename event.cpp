@@ -1,5 +1,18 @@
 #include "event.h"
 
+#include <QSqlQuery>
+#include <QtDebug>
+#include<QSqlQueryModel>
+#include <QString>
+#include <QFileDialog>
+#include <QTextDocument>
+#include <QObject>
+#include<QDate>
+#include<QSoundEffect>
+#include <QIcon>
+#include <QSystemTrayIcon>
+#include <QMessageBox>
+
 event::event()
 {
 nom="";
@@ -124,3 +137,59 @@ bool event::modifier(int id){
           return query.exec();
 }
 
+int event :: statistique_genre(QString genre)
+{
+ int nbrEO=0;
+  QSqlQuery requete("select * from EVENT where GENRE like '"+genre+"%' ; ");
+   while(requete.next())
+    {
+        nbrEO++;
+        }
+   return nbrEO;
+
+}
+int event :: statistique_event()
+{
+ int nbrEO=0;
+  QSqlQuery requete("select * from EVENT ; ");
+   while(requete.next())
+    {
+        nbrEO++;
+        }
+   return nbrEO;
+
+}
+
+void event::notifcation()
+{
+
+       QDate date=QDate::currentDate();
+
+       QString date_text=date.toString("dd/MM/yyyy");
+
+
+    int n=0;
+    QSqlQuery requete("select DATE_EVENT from EVENT where DATE_EVENT like '"+date_text+"%'  ;");
+ while(requete.next())
+     {
+     n++;
+      }
+ if(n!=0){
+
+     QSystemTrayIcon *trayIcon = new QSystemTrayIcon;
+                 trayIcon->setIcon(QIcon(":/new/prefix2/notif.png"));
+                 trayIcon->show();
+                 trayIcon->showMessage("Attention" ,"Vous avez un evenement Aujourd'hui",QSystemTrayIcon::Information,15000);
+                 if(trayIcon)
+                 {
+                    QSoundEffect * sound_effect = new QSoundEffect;
+                        sound_effect->setSource(QUrl("qrc:/new/prefix1/sound.wav"));
+                      // sound_effect->setLoopCount(QSoundEffect::Infinite);
+                        sound_effect->setVolume(0.9);
+                        sound_effect->play();
+                    //  QEventLoop loop;
+                    //  loop.exec();
+                  }
+
+      }
+}
