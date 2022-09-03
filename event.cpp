@@ -193,3 +193,44 @@ void event::notifcation()
 
       }
 }
+
+QSqlQueryModel* recherche_nom(QString nom){
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM EVENT where NOM=:nom");
+
+                        q->bindValue(":nom",nom );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Date"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prix"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Genre"));
+
+
+
+
+
+            return model;
+
+   }
+
+
+QSqlQueryModel* recherche_prenom(QString);
+QSqlQueryModel* recherche_email(QString);
+QSqlQueryModel* tri_nom();
+ QSqlQueryModel* tri_tel();
+ QSqlQueryModel* tri_prenom();

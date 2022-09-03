@@ -168,6 +168,56 @@ void MainWindow::on_pushButton_23_clicked()
     ui->tabclient->setModel(C.afficher());
 }
 
+//tri prenom
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QSqlQuery *b = new QSqlQuery();
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+
+      b->prepare("SELECT * FROM CLIENT ORDER BY PRENOM");
+
+      b->exec();
+
+      model->setQuery(*b);
+
+   ui->tabclient->setModel(model);
+}
+
+// tri nom
+void MainWindow::on_pushButton_4_clicked()
+{
+    QSqlQuery *b = new QSqlQuery();
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+
+      b->prepare("SELECT * FROM CLIENT ORDER BY NOM_CLIENT");
+
+      b->exec();
+
+      model->setQuery(*b);
+
+   ui->tabclient->setModel(model);
+}
+
+//tri telephone
+void MainWindow::on_pushButton_8_clicked()
+{
+    QSqlQuery *b = new QSqlQuery();
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+
+      b->prepare("SELECT * FROM CLIENT ORDER BY TELEPHONE");
+
+      b->exec();
+
+      model->setQuery(*b);
+
+   ui->tabclient->setModel(model);
+}
+
+
 // **************************************************** * event * ******************************************************************
 
 //ajouet button
@@ -374,3 +424,258 @@ void MainWindow::on_pushButton_2_clicked()
 }
 
 
+// chercher par nom
+void MainWindow::on_pushButton_20_clicked()
+{
+    QString nomm=ui->chercher_ev->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM EVENT where NOM=:nom");
+
+                        q->bindValue(":nom",nomm );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Date"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prix"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Genre"));
+
+
+ui->tabevent->setModel(model);
+
+
+}
+
+// chercher id
+void MainWindow::on_pushButton_21_clicked()
+{
+    QString id=ui->chercher_ev->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM EVENT where ID_EVENT=:id");
+
+                        q->bindValue(":id",id );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Date"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prix"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Genre"));
+
+
+ui->tabevent->setModel(model);
+}
+
+//chercher genre
+
+void MainWindow::on_pushButton_22_clicked()
+{
+    QString genre=ui->chercher_ev->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM EVENT where GENRE=:genre");
+
+                        q->bindValue(":genre",genre );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Date"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prix"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Genre"));
+
+
+ui->tabevent->setModel(model);
+}
+
+
+// tri prix
+void MainWindow::on_pushButton_19_clicked()
+{
+    QSqlQuery *b = new QSqlQuery();
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+
+      b->prepare("SELECT * FROM EVENT ORDER BY PRIX");
+
+      b->exec();
+
+      model->setQuery(*b);
+
+   ui->tabevent->setModel(model);
+
+
+}
+
+//tri genre
+void MainWindow::on_pushButton_17_clicked()
+{
+    QSqlQuery *b = new QSqlQuery();
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+
+      b->prepare("SELECT * FROM EVENT ORDER BY GENRE");
+
+      b->exec();
+
+      model->setQuery(*b);
+
+   ui->tabevent->setModel(model);
+}
+
+//tri nom
+void MainWindow::on_pushButton_18_clicked()
+{
+    QSqlQuery *b = new QSqlQuery();
+
+      QSqlQueryModel *model = new QSqlQueryModel();
+
+      b->prepare("SELECT * FROM EVENT ORDER BY NOM");
+
+      b->exec();
+
+      model->setQuery(*b);
+
+   ui->tabevent->setModel(model);
+}
+
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    QString id=ui->chercher_cl->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM CLIENT where ID_CLIENT=:id");
+
+                        q->bindValue(":id",id );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
+
+
+ui->tabclient->setModel(model);
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    QString nomm=ui->chercher_cl->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM CLIENT where NOM_CLIENT=:nom");
+
+                        q->bindValue(":nom",nomm );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
+
+
+ui->tabclient->setModel(model);
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    QString e=ui->chercher_cl->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM CLIENT where EMAIL=:email");
+
+                        q->bindValue(":email",e );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
+
+
+ui->tabclient->setModel(model);
+}

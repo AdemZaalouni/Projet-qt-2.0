@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -43,7 +43,7 @@
        <string notr="true">background:black;</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -342,7 +342,7 @@ background:red;</string>
          <string>Tri par telephone</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_22">
+       <widget class="QLineEdit" name="chercher_cl">
         <property name="geometry">
          <rect>
           <x>710</x>
@@ -906,7 +906,7 @@ background:red;</string>
          <string>Chercher par genre</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_21">
+       <widget class="QLineEdit" name="chercher_ev">
         <property name="geometry">
          <rect>
           <x>690</x>
