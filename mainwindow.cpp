@@ -137,7 +137,7 @@ void MainWindow::on_pushButton_10_clicked()
 //button modifier
 void MainWindow::on_pushButton_11_clicked()
 {
-    client C;
+
     QMessageBox msg;
     int id=ui->id_m->text().toInt();
     QString nom_m=ui->nom_m->text();
@@ -216,6 +216,107 @@ void MainWindow::on_pushButton_8_clicked()
 
    ui->tabclient->setModel(model);
 }
+
+//recherche id
+void MainWindow::on_pushButton_6_clicked()
+{
+    QString id=ui->chercher_cl->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM CLIENT where ID_CLIENT=:id");
+
+                        q->bindValue(":id",id );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
+
+
+ui->tabclient->setModel(model);
+}
+// rechercher nom
+void MainWindow::on_pushButton_7_clicked()
+{
+    QString nomm=ui->chercher_cl->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM CLIENT where NOM_CLIENT=:nom");
+
+                        q->bindValue(":nom",nomm );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
+
+
+ui->tabclient->setModel(model);
+}
+//recherche email
+void MainWindow::on_pushButton_5_clicked()
+{
+    QString e=ui->chercher_cl->text();
+
+
+    QSqlQuery * q = new  QSqlQuery ();
+
+
+
+                        QSqlQueryModel * model = new  QSqlQueryModel ();
+
+                        q->prepare("select * FROM CLIENT where EMAIL=:email");
+
+                        q->bindValue(":email",e );
+
+                        q->exec();
+
+
+
+            model->setQuery(*q);
+
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
+
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
+
+
+ui->tabclient->setModel(model);
+}
+
 
 
 // **************************************************** * event * ******************************************************************
@@ -343,13 +444,13 @@ void MainWindow::on_pushButton_2_clicked()
 {
     QSqlDatabase db;
                         QTableView tabe;
-                        QSqlQueryModel * Modal=new  QSqlQueryModel();
+                        QSqlQueryModel * Model=new  QSqlQueryModel();
 
                         QSqlQuery qry;
                          qry.prepare("SELECT * FROM CLIENT ");
                          qry.exec();
-                         Modal->setQuery(qry);
-                         tabe.setModel(Modal);
+                         Model->setQuery(qry);
+                         tabe.setModel(Model);
 
                          db.close();
 
@@ -581,101 +682,3 @@ void MainWindow::on_pushButton_18_clicked()
 }
 
 
-void MainWindow::on_pushButton_6_clicked()
-{
-    QString id=ui->chercher_cl->text();
-
-
-    QSqlQuery * q = new  QSqlQuery ();
-
-
-
-                        QSqlQueryModel * model = new  QSqlQueryModel ();
-
-                        q->prepare("select * FROM CLIENT where ID_CLIENT=:id");
-
-                        q->bindValue(":id",id );
-
-                        q->exec();
-
-
-
-            model->setQuery(*q);
-
-            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
-
-            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
-
-            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
-
-            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
-
-
-ui->tabclient->setModel(model);
-}
-
-void MainWindow::on_pushButton_7_clicked()
-{
-    QString nomm=ui->chercher_cl->text();
-
-
-    QSqlQuery * q = new  QSqlQuery ();
-
-
-
-                        QSqlQueryModel * model = new  QSqlQueryModel ();
-
-                        q->prepare("select * FROM CLIENT where NOM_CLIENT=:nom");
-
-                        q->bindValue(":nom",nomm );
-
-                        q->exec();
-
-
-
-            model->setQuery(*q);
-
-            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
-
-            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
-
-            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
-
-            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
-
-
-ui->tabclient->setModel(model);
-}
-
-void MainWindow::on_pushButton_5_clicked()
-{
-    QString e=ui->chercher_cl->text();
-
-
-    QSqlQuery * q = new  QSqlQuery ();
-
-
-
-                        QSqlQueryModel * model = new  QSqlQueryModel ();
-
-                        q->prepare("select * FROM CLIENT where EMAIL=:email");
-
-                        q->bindValue(":email",e );
-
-                        q->exec();
-
-
-
-            model->setQuery(*q);
-
-            model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
-
-            model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
-
-            model->setHeaderData(3,Qt::Horizontal,QObject::tr("Email"));
-
-            model->setHeaderData(4,Qt::Horizontal,QObject::tr("Telephone"));
-
-
-ui->tabclient->setModel(model);
-}

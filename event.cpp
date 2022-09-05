@@ -184,11 +184,10 @@ void event::notifcation()
                  {
                     QSoundEffect * sound_effect = new QSoundEffect;
                         sound_effect->setSource(QUrl("qrc:/new/prefix1/sound.wav"));
-                      // sound_effect->setLoopCount(QSoundEffect::Infinite);
+
                         sound_effect->setVolume(0.9);
                         sound_effect->play();
-                    //  QEventLoop loop;
-                    //  loop.exec();
+
                   }
 
       }
@@ -229,8 +228,4 @@ QSqlQueryModel* recherche_nom(QString nom){
    }
 
 
-QSqlQueryModel* recherche_prenom(QString);
-QSqlQueryModel* recherche_email(QString);
-QSqlQueryModel* tri_nom();
- QSqlQueryModel* tri_tel();
- QSqlQueryModel* tri_prenom();
+

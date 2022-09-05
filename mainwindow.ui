@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -43,7 +43,7 @@
        <string notr="true">background:black;</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -78,8 +78,8 @@
        <widget class="QLineEdit" name="email">
         <property name="geometry">
          <rect>
-          <x>422</x>
-          <y>239</y>
+          <x>420</x>
+          <y>240</y>
           <width>231</width>
           <height>31</height>
          </rect>
@@ -112,7 +112,8 @@
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Ajouter</string>
@@ -122,7 +123,7 @@ background:red;</string>
         <property name="geometry">
          <rect>
           <x>270</x>
-          <y>83</y>
+          <y>80</y>
           <width>131</width>
           <height>41</height>
          </rect>
@@ -155,7 +156,7 @@ width:200px;</string>
        <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
-          <x>280</x>
+          <x>270</x>
           <y>250</y>
           <width>111</width>
           <height>16</height>
@@ -172,7 +173,7 @@ width:200px;</string>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
-          <x>280</x>
+          <x>270</x>
           <y>320</y>
           <width>111</width>
           <height>16</height>
@@ -194,15 +195,16 @@ width:200px;</string>
        <widget class="QPushButton" name="pushButton_2">
         <property name="geometry">
          <rect>
-          <x>710</x>
-          <y>50</y>
+          <x>690</x>
+          <y>40</y>
           <width>101</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;
-background:red;</string>
+         <string notr="true">color:black;
+background:yellow;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>PDF</string>
@@ -211,15 +213,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_3">
         <property name="geometry">
          <rect>
-          <x>600</x>
-          <y>150</y>
+          <x>550</x>
+          <y>160</y>
           <width>91</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Tri par prenom</string>
@@ -228,15 +231,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_4">
         <property name="geometry">
          <rect>
-          <x>720</x>
-          <y>150</y>
+          <x>700</x>
+          <y>160</y>
           <width>91</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Tri par nom</string>
@@ -245,15 +249,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_5">
         <property name="geometry">
          <rect>
-          <x>840</x>
+          <x>830</x>
           <y>280</y>
-          <width>101</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Recherche par email</string>
@@ -262,25 +267,25 @@ background:red;</string>
        <widget class="QLabel" name="label_5">
         <property name="geometry">
          <rect>
-          <x>580</x>
+          <x>520</x>
           <y>100</y>
-          <width>351</width>
-          <height>20</height>
+          <width>531</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;</string>
         </property>
         <property name="text">
-         <string>____________________________________________________________________</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffff00;&quot;&gt;____________________________________________________________________________&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>580</x>
+          <x>520</x>
           <y>230</y>
-          <width>351</width>
+          <width>441</width>
           <height>20</height>
          </rect>
         </property>
@@ -288,13 +293,13 @@ background:red;</string>
          <string notr="true">color:white;</string>
         </property>
         <property name="text">
-         <string>____________________________________________________________________</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffff00;&quot;&gt;__________________________________________________________________________&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_6">
         <property name="geometry">
          <rect>
-          <x>580</x>
+          <x>550</x>
           <y>280</y>
           <width>91</width>
           <height>31</height>
@@ -302,7 +307,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Recherche par id </string>
@@ -311,7 +317,7 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_7">
         <property name="geometry">
          <rect>
-          <x>710</x>
+          <x>690</x>
           <y>280</y>
           <width>101</width>
           <height>31</height>
@@ -319,7 +325,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Recherche par nom</string>
@@ -329,14 +336,15 @@ background:red;</string>
         <property name="geometry">
          <rect>
           <x>840</x>
-          <y>150</y>
+          <y>160</y>
           <width>101</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Tri par telephone</string>
@@ -345,7 +353,7 @@ background:red;</string>
        <widget class="QLineEdit" name="chercher_cl">
         <property name="geometry">
          <rect>
-          <x>710</x>
+          <x>670</x>
           <y>360</y>
           <width>141</width>
           <height>31</height>
@@ -402,7 +410,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Supprimer</string>
@@ -460,13 +469,14 @@ background:red;</string>
          <rect>
           <x>610</x>
           <y>140</y>
-          <width>91</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>chercher</string>
@@ -514,7 +524,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Modifier</string>
@@ -656,7 +667,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Ajouter</string>
@@ -791,14 +803,15 @@ width:200px;</string>
         <property name="geometry">
          <rect>
           <x>840</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
+          <y>10</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;
-background:red;</string>
+         <string notr="true">color:black;
+background:yellow;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Imprimer</string>
@@ -807,15 +820,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_17">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
+          <x>630</x>
+          <y>40</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Tri par genre</string>
@@ -824,15 +838,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_18">
         <property name="geometry">
          <rect>
-          <x>740</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
+          <x>730</x>
+          <y>40</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Tri par nom</string>
@@ -841,15 +856,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_19">
         <property name="geometry">
          <rect>
-          <x>560</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
+          <x>540</x>
+          <y>42</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Tri par prix</string>
@@ -858,15 +874,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_20">
         <property name="geometry">
          <rect>
-          <x>610</x>
-          <y>70</y>
+          <x>570</x>
+          <y>100</y>
           <width>91</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Chercher Nom</string>
@@ -875,15 +892,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_21">
         <property name="geometry">
          <rect>
-          <x>710</x>
-          <y>70</y>
+          <x>690</x>
+          <y>100</y>
           <width>91</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Chercher par id</string>
@@ -892,15 +910,16 @@ background:red;</string>
        <widget class="QPushButton" name="pushButton_22">
         <property name="geometry">
          <rect>
-          <x>810</x>
-          <y>70</y>
+          <x>800</x>
+          <y>100</y>
           <width>111</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Chercher par genre</string>
@@ -909,8 +928,8 @@ background:red;</string>
        <widget class="QLineEdit" name="chercher_ev">
         <property name="geometry">
          <rect>
-          <x>690</x>
-          <y>120</y>
+          <x>670</x>
+          <y>150</y>
           <width>141</width>
           <height>21</height>
          </rect>
@@ -960,7 +979,7 @@ background:red;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;</string>
+         <string notr="true">color:red;</string>
         </property>
         <property name="text">
          <string>Musique</string>
@@ -976,7 +995,7 @@ background:red;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;</string>
+         <string notr="true">color:yellow;</string>
         </property>
         <property name="text">
          <string>Historique</string>
@@ -1008,7 +1027,7 @@ background:red;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;</string>
+         <string notr="true">color:red;</string>
         </property>
         <property name="value">
          <number>24</number>
@@ -1024,7 +1043,7 @@ background:red;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;</string>
+         <string notr="true">color:yellow;</string>
         </property>
         <property name="value">
          <number>24</number>
@@ -1104,7 +1123,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Supprimer</string>
@@ -1270,14 +1290,15 @@ background:red;</string>
         <property name="geometry">
          <rect>
           <x>250</x>
-          <y>332</y>
+          <y>310</y>
           <width>111</width>
           <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Modifer</string>
@@ -1294,7 +1315,8 @@ background:red;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:white;
-background:red;</string>
+background:red;
+border-radius: 15px;</string>
         </property>
         <property name="text">
          <string>Chercher</string>
