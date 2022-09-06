@@ -810,7 +810,7 @@ width:200px;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">color:black;
-background:yellow;
+background:white;
 border-radius: 15px;</string>
         </property>
         <property name="text">
